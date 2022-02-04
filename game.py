@@ -6,13 +6,20 @@
 # ... https://github.com/prof-rossetti/intro-to-python/blob/main/exercises/rock-paper-scissors/README.md
 #
 
+#Player Name Customization
+
+import os
+
+player_name = os.getenv("PLAYER_NAME", default="Player One")
+
+
 print("-------------------\n")
-print("Welcome 'Player One' to my Rock-Paper-Scissors game...\n")
+print("Welcome", player_name, "to my Rock-Paper-Scissors game...\n")
 print("-------------------\n")
 
 # ASK FOR USER INPUT
 
-user_choice = input("Please choose one of: 'rock', 'paper', 'scissors' : \n")
+user_choice = input("Please choose one of: 'rock', 'paper', 'scissors' : ")
 # https://www.freecodecamp.org/news/python-new-line-and-how-to-python-print-without-a-newline/
 print("USER CHOSE:", user_choice, end='\n')
 
@@ -20,8 +27,9 @@ print("USER CHOSE:", user_choice, end='\n')
 # VALIDATIONS
 
 # https://www.w3schools.com/python/ref_string_lower.asp
-user_choice.lower()
+user_choice = user_choice.lower()
 
+#https://stackoverflow.com/questions/19632728/how-do-i-get-a-python-program-to-do-nothing/19632742
 if user_choice == "rock" or user_choice == 'paper' or user_choice == 'scissors':
     pass
 else:
@@ -73,3 +81,4 @@ elif user_choice == "rock":
 
 print("-------------------\n")
 print("Thanks for playing. Please play again!")
+

@@ -37,3 +37,4 @@ Run tests:
 ```sh
 pytest
 ```
+## An enviroment variable allows you to customize your player name. In order to pass an enviroment varaible to the script during the runtime, you need to type "PLAYER_NAME="Desired name" python game.py" on gitbash. 
