@@ -55,11 +55,18 @@ print("COMPUTER CHOSE:", computer_choice, end='\n')
 
 
 # DETERMINE THE WINNER
+# option a) nested IF statements
+# adapted from eugenie in Slack
 
 print("-------------------\n")
 
 if user_choice == computer_choice:
     print("It's a tie!")
+elif user_choice == "rock":
+    if computer_choice == "scissors":
+        print("You won!")
+    else:
+        print("Oh, the computer won. It's ok.")
 elif user_choice == "paper":
     if computer_choice == "rock":
         print("You won!")
@@ -67,11 +74,6 @@ elif user_choice == "paper":
         print("Oh, the computer won. It's ok.")
 elif user_choice == "scissors":
     if computer_choice == "paper":
-        print("You won!")
-    else:
-        print("Oh, the computer won. It's ok.")
-elif user_choice == "rock":
-    if computer_choice == "scissors":
         print("You won!")
     else:
         print("Oh, the computer won. It's ok.")
